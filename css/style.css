@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.img-topo {
+  display: flex;
+}
+nav div img {
+  width: 65px;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  font-family: "Berkshire Swash";
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.margem-topo {
+  display: flex;
+  flex-direction: column;
+}
+.frase-logo {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+  font-family: "Clear Sans";
+  background-color: #ff6f92;
+  height: auto;
+}
+.nav-lista {
+  list-style: none;
+  display: flex;
+}
+.nav-lista li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+.menu-mobile div {
+  width: 32px;
+  height: 1px;
+  background: #fff;
+  margin: 8px;
+}
+.menu-mobile {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-lista {
+    position: fixed;
+    top: 13vh;
+    right: 0;
+    width: 50vw;
+    height: 93vh;
+    background-color: #ff6f92;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-lista li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .menu-mobile {
+    display: block;
+  }
+}
+.nav-lista.active {
+  transform: translateX(0);
+}
+@keyframes navLinksFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h1 {
+  color: #f1f0f0;
+  font-family: "Clear Sans";
+}
+.destaque {
+  color: #ace1af;
+}
+.titulo {
+  width: 400px;
+  padding: 5px;
+  border-radius: 5px;
+  backdrop-filter: blur(1px);
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: changeBackground 15s infinite;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+}
+@keyframes changeBackground {
+  0% {
+    background-image: url("https://harald.com.br/wp-content/uploads/2020/04/briadeirogormet-melken-700x520-1.jpg");
+    background-position: center center;
+  }
+  33% {
+    background-image: url("https://images.tcdn.com.br/img/img_prod/983116/trufa_de_avela_37_1_ee9a02bf1d615ceefb0aa579bd9f642d.jpg");
+    background-position: center center;
+  }
+  66% {
+    background-image: url("https://cdn.casaeculinaria.com/wp-content/uploads/2023/03/02161443/Brownie-de-nescau.jpg");
+    background-position: center center;
+  }
+  100% {
+    background-image: url("https://harald.com.br/wp-content/uploads/2020/04/briadeirogormet-melken-700x520-1.jpg");
+    background-position: center center;
+  }
+}
+.titulo a {
+  width: 170px;
+  border: 1px solid gray;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #a78a64;
+  margin-top: 15px;
+}
+.botao-whats {
+  display: flex;
+  justify-content: center;
+}
+a img {
+  width: 50px;
+}
+.produto {
+  background-image: url(../assets/SECTION2.jpg);
+  background-repeat: repeat;
+  background-position: center center;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+span {
+  font-weight: bold;
+}
+.card {
+  background-color: #ace1af;
+  width: 250px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px 1px gray;
+}
+
+.paragrafo-cardapio {
+  height: 150px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Clear Sans";
+  text-align: justify;
+}
+
+.preco {
+  padding: 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #c9c4c4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+button {
+  width: 35px;
+  height: 35px;
+}
+.informacao {
+  padding: 20px 0;
+  width: 100%;
+  background-color: rgba(255, 238, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.informacao h2 {
+  text-align: center;
+  color: #f290a1;
+  font-family: "Clear Sans";
+}
+.informacao img {
+  width: 50px;
+}
+.lista-info li {
+  text-align: left;
+  list-style: none;
+  font-family: "Clear Sans";
+  padding: 10px 0;
+}
+.lista-info li::before {
+  content: "";
+  background-image: url(../assets/bef.png);
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+.botao {
+  padding-top: 10px;
+  color: #f1f0f0;
+  background-color: #63441d;
+  width: 100%;
+  font-family: "Clear Sans";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preco a {
+  color: #000000;
+  font-family: "Clear Sans";
+}
+.container-rodape {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  background-color: #ff6f92;
+}
+.container-imagem {
+  width: 80px;
+}
+.container-imagem img {
+  width: 100%;
+  height: 100%;
+}
+.container-contato {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.container-contato div {
+  padding: 10px 0;
+  border: 1px solid #ace1af;
+  border-radius: 4px;
+  flex: 1 1 240px;
+  text-align: center;
+}
+.container-descricao {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.container-descricao a {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  background-color: #dddddd;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+}
+a img {
+  width: 40px;
+  height: 40px;
+}
+.container-redes-sociais img {
+  width: 30px;
+  margin-right: 5px;
+}
+.paragrafo-rodape h1 {
+  font-size: 22px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-family: "Berkshire Swash";
+}
+.card-container {
+  text-align: justify;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#sobre {
+  position: relative;
+  background-image: url("https://media.tenor.com/CoQL2lJ_3SwAAAAM/panda.gif");
+  padding: 10px;
+  background-position: center center;
+}
+.card-container {
+  position: relative;
+}
+.botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.botoes button {
+  width: auto;
+  height: auto;
+  border: none;
+  cursor: pointer;
+  margin: 0 100px 50px 100px;
+}
+.botoes button img {
+  width: 30px;
+}
+.menu {
+  display: flex;
+  justify-content: space-around; 
+  background-color: #ff6f92; 
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.menu-button {
+  padding: 10px;
+  background-color: #ff6f92;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: auto;
+  width: auto;
+  font-weight: bold;
+  font-size: 15px;
+}
+.items {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-align: start;
+}
+@media (max-width: 855px) {
+  .items {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 866px) {
+  .items {
+    justify-content: center;
+  }
+}
+.item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  flex-shrink: 0;
+  width: 250px;
+  text-align: center;
+  scroll-snap-align: start;
+  display: none;
+  align-items: center;
+  background-color: #d6a667;
+}
+.show {
+  display: block;
+}
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.item-brigadeiro {
+  display: flex;
+  flex-direction: column;
+}
+.items img {
+  width: 200px;
+}
+.botao-finalizar{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ff6f92;
+  text-align: center;
+}
+.c{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-button[data-category="brigadeiro"].selected {
+  background-color: #ace1af; 
+  font-family: 'Clear Sans';
+}
+.menu-button[data-category="trufa"].selected {
+  background-color: #ace1af;
+  font-family: 'Clear Sans';
+}
+.menu-button[data-category="brownie"].selected {
+  background-color: #ace1af;
+  color: #fff; 
+  font-family: 'Clear Sans';
+}
